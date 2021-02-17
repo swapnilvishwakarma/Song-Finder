@@ -1,0 +1,35 @@
+body {
+  display: grid;  
+  /* background: lightseagreen; */
+  background-image: linear-gradient(to right, rgb(59, 182, 59), rgb(38, 129, 109));
+  text-align: center; 
+  padding: 10px; 
+  font-size: 1.2em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+hr {
+  margin: 1.2em 0;
+}
+
+input, button {
+  font-size: 1.2rem;
+}
+
+input {
+  width: 40%;
+  margin: 0 20px;
+}
+
+h1 {
+  color:lightgoldenrodyellow
+}
+
+audio {
+  margin-bottom: 30px;
+}
