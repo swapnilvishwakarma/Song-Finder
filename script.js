@@ -8,7 +8,15 @@
 
 // JS code is asynchronus => while the request is being fetched, code below it is not blocked.
 
-const url = 'https://itunes.apple.com/search?term=beyonce'
+let term = ''
+
+const updateTerm = () => {
+    term = document.getElementById('searchInput').value;
+
+    if(!term || term === '') {
+        alert('Please enter a search term')
+    } else {
+        const url = `https://itunes.apple.com/search?term=${term}`
 
 fetch(url)
 .then( (response) => response.json() )
@@ -43,3 +51,9 @@ fetch(url)
     })
 })
 .catch(error => console.log('Request failed: ', error))
+    }
+}
+
+
+const searchBtn = document.querySelector('button')
+searchBtn.addEventListener('click', updateTerm)
