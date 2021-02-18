@@ -8,10 +8,10 @@
 
 // JS code is asynchronus => while the request is being fetched, code below it is not blocked.
 
-const url = 'https://itunes.apple.com/search?term=beyounce';
+const url = 'https://itunes.apple.com/search?term=beyonce'
 
-fetch(url, {mode: 'no-cors'})
-.then( (response) => response.json())
+fetch(url)
+.then( (response) => response.json() )
 .then((data) => {
     console.log(data.results);
 })
